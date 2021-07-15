@@ -28,7 +28,7 @@
                             {{data.cmpnyCity}}</span>
                     </div>
                     <div class="col-md-6 col-lg-6 col-lg-sm-12" style="text-align: end;margin-top: 15px;">
-                        <button href="#" class="btn btn-primary">Apply Job</button>
+                        <button href="#" class="btn btn-primary" (click)="applyJob()">Apply Job</button>
                     </div>
                 </div>
             </div>
@@ -41,9 +41,21 @@
                 <hr>
                 <p>{{data.jobDesc}}</p>
                 <hr>
-                <button href="#" class="btn btn-primary">Apply Job</button>
+                <button href="#" class="btn btn-primary" (click)="applyJob()">Apply Job</button>
             </div>
         </div>
     </div>
 </section>
 <!-- ***** Fleet Ends ***** -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <span>{{apply_success}}</span>
+            </div>
+        </div>
+    </div>

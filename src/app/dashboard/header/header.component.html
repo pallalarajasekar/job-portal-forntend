@@ -9,20 +9,24 @@
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li><a routerLink="/dashboard/home" (click)="clickEvent()" [ngClass]="status ? 'success' : 'danger'">Home</a></li>
-                        <li><a routerLink="/dashboard/jobs">Jobs</a></li>
-                        <li *ngIf = "roleActive === 'Recruiter' || roleActive === '' "><a routerLink="/dashboard/posting">Job Post</a></li>
-                        <li *ngIf = "!token"><a routerLink="/login">Login/Register</a></li>
-                        <li *ngIf = "token">
+                        <li><a routerLink="/dashboard/home" (click)="clickEvent()"
+                                [ngClass]="status ? 'success' : 'danger'">Home</a></li>
+                        <li><a routerLink="/dashboard/jobs" (click)="clickEvent1()"
+                                [ngClass]="status1 ? 'success' : 'danger'">Jobs</a></li>
+                        <li *ngIf="roleActive === 'Recruiter' || roleActive === '' "><a routerLink="/dashboard/posting"
+                                (click)="clickEvent2()" [ngClass]="status2 ? 'success' : 'danger'">Job Post</a></li>
+                        <li *ngIf="!token"><a routerLink="/login">Login/Register</a></li>
+                        <li *ngIf="token">
                             <div class="dropdown">
                                 <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff;">
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    style="color: #fff;">
                                     {{fullName}}
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <button class="dropdown-item" (click)="logout()">Logout</button>
-                                    <hr>
-                                    <button class="dropdown-item" (click)="profile()">Profile</button>
+                                    <!-- <hr>
+                                    <button class="dropdown-item" (click)="profile()">Profile</button> -->
                                 </div>
                             </div>
                         </li>

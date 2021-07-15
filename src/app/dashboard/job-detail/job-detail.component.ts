@@ -3,6 +3,8 @@ import { Validators, FormGroup, FormBuilder } from '@angular/forms'
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../../data.service';
 
+declare var $: any;
+
 @Component({
   selector: 'app-job-detail',
   templateUrl: './job-detail.component.html',
@@ -39,6 +41,18 @@ export class JobDetailComponent implements OnInit {
 
   logout(){
     
+  }
+
+  apply_success!: string;
+  applyJob(){
+
+    this.apply_success = "successfuly applied job"
+    $("#exampleModal").modal('show');
+
+      setTimeout( () => {
+        $('#exampleModal').modal('hide');
+     }, 2000);
+
   }
 
 }

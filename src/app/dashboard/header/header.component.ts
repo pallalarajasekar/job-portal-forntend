@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   constructor(private route: Router) { }
-  status: boolean = false;
+  
   token!: any; 
   fullName: any;
   roleActive: any;
@@ -53,8 +53,27 @@ export class HeaderComponent implements OnInit {
 
   }
 
+  status: boolean = false;
   clickEvent() {
+    this.status1 = false;
+    this.status2 = false;
     console.log(this.status);
     this.status = !this.status;
+  }
+
+  status1: boolean = false;
+  clickEvent1() {
+    this.status = false;
+    this.status2 = false;
+    console.log(this.status);
+    this.status1 = !this.status1;
+  }
+
+  status2: boolean = false;
+  clickEvent2() {
+    this.status1 = false;
+    this.status = false;
+    console.log(this.status);
+    this.status2 = !this.status2;
   }
 }

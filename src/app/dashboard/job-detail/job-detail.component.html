@@ -1,0 +1,49 @@
+<!-- ***** Call to Action Start ***** -->
+<section class="section section-bg" id="call-to-action"
+    style="background-image: url(assets/img/banner-image-1-1920x500.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="cta-content">
+                    <br>
+                    <br>
+                    <h2></h2>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Call to Action End ***** -->
+
+<!-- ***** Fleet Starts ***** -->
+<section class="section" id="trainers">
+    <div class="container">
+        <div class="card" style="margin-top: 50px;" *ngFor="let data of jobDetailData">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6 col-lg-6 col-lg-sm-12">
+                        <h3 style="color: #c00">{{data.jobTitle}}</h3>
+                        <span style="display: block;"><span style="color: blue;">{{data.cmpnyName}},</span>
+                            {{data.cmpnyCity}}</span>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-lg-sm-12" style="text-align: end;margin-top: 15px;">
+                        <button href="#" class="btn btn-primary">Apply Job</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">{{data.careerLevel}}</h4>
+                <p>Position: {{data.positions}}</p>
+                <p>Job Type: {{data.jobType}}</p>
+
+                <h4 style="color: #c00">Job Description</h4>
+                <hr>
+                <p>{{data.jobDesc}}</p>
+                <hr>
+                <button href="#" class="btn btn-primary">Apply Job</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Fleet Ends ***** -->

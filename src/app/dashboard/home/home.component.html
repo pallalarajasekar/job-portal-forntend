@@ -1,0 +1,40 @@
+<!-- ***** Main Banner Area Start ***** -->
+<div class="main-banner" id="top">
+    <video autoplay muted loop id="bg-video">
+        <source src="/assets/img/video.mp4" type="video/mp4" />
+    </video>
+
+    <div class="video-overlay header-text">
+        <div class="caption">
+            <h2>Find the perfect <em>Job</em></h2>
+            <form  [formGroup]="formGroup" (ngSubmit)="serachJob()">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-briefcase" aria-hidden="true"></i></span>
+                              </div>
+                            <input class="form-control py-4" formControlName="jobTitle" type="text"
+                                aria-describedby="emailHelp" placeholder="eg. web developer, java developer, devops engineer" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                              </div>
+                            <input class="form-control py-4" formControlName="cmpnyCity" type="text"
+                                aria-describedby="emailHelp" placeholder="location" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <button  class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- ***** Main Banner Area End ***** -->

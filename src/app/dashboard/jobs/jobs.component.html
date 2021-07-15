@@ -1,0 +1,98 @@
+<!-- ***** Call to Action Start ***** -->
+<section class="section section-bg" id="call-to-action" style="background-image: url(assets/img/banner-image-1-1920x500.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="cta-content">
+                    <br>
+                    <br>
+                    <h2></h2>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Call to Action End ***** -->
+
+<!-- ***** Fleet Starts ***** -->
+<section class="section" id="trainers">
+    <div class="container">
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <form [formGroup]="formGroup">
+                    <h5 style="margin-bottom: 15px">Type</h5>
+
+                    <div *ngFor="let job of jobTitleList">
+                        <label>
+                          <input type="checkbox" [value]="job.name" (change)="onCheckboxChange($event)" />
+                          {{job.name}}
+                        </label>
+                      </div>
+
+                    <br>
+
+                    <h5 style="margin-bottom: 15px">Category</h5>
+
+                    <div *ngFor="let cat of categoryTypeList">
+                        <label>
+                          <input type="checkbox" [value]="cat.name" (change)="onCheckboxChange1($event)" />
+                          {{cat.name}}
+                        </label>
+                      </div>
+
+                    <br>
+
+                    <h5 style="margin-bottom: 15px">Career levels</h5>
+
+                    <div *ngFor="let cart of careerLevelList">
+                        <label>
+                          <input type="checkbox" [value]="cart.name" (change)="onCheckboxChange2($event)" />
+                          {{cart.name}}
+                        </label>
+                      </div>
+
+                    <!-- <br> -->
+
+                    <!-- <h5 style="margin-bottom: 15px">Years of experience</h5> -->
+
+                
+                </form>
+
+                <br>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-md-12 card" *ngFor="let data of jobsData">
+                        <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">
+                            <div class="mb-4 mb-md-0 mr-5">
+                                <div class="job-post-item-header d-flex align-items-center">
+                                    <h2 class="mr-3 text-black h3">{{data.jobTitle}}</h2>
+                                    <div class="badge-wrap">
+                                        <span *ngIf="data.jobType == 'Full time' " class="btn-success text-white badge py-2 px-3">{{data.jobType}}</span>
+                                        <span *ngIf="data.jobType == 'Contract' " class="btn-danger text-white badge py-2 px-3">{{data.jobType}}</span>
+                                        <span *ngIf="data.jobType == 'Part Time' " class="btn-primary text-white badge py-2 px-3">{{data.jobType}}</span>
+                                        <span *ngIf="data.jobType == 'Internship' " class="btn-warning text-white badge py-2 px-3">{{data.jobType}}</span>
+                                    </div>
+                                </div>
+                                <div class="job-post-item-body d-block d-md-flex">
+                                    <div class="mr-3"><span class="icon-layers"></span> <a>{{data.cmpnyName}}</a>
+                                    </div>
+                                    <div><span class="icon-my_location"></span> <span>{{data.cmpnyCity}}, {{data.cmpnyCuntry}}</span></div>
+                                </div>
+                            </div>
+                            <div class="ml-auto d-flex">
+                                <button class="btn btn-primary" (click)="getJobDetail(data)">Apply Job</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Fleet Ends ***** -->

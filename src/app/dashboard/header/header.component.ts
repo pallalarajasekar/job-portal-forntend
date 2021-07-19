@@ -25,6 +25,8 @@ export class HeaderComponent implements OnInit {
     }else{
       if(localStorage.getItem("role") == "Recruiter"){
         this.roleActive = localStorage.getItem("role");
+      }else if(localStorage.getItem("role") == "Job seeker"){
+        this.roleActive = localStorage.getItem("role");
       }
       
     }

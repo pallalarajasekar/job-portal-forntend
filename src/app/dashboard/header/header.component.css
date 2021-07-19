@@ -5,3 +5,19 @@
     color: #fff !important;
 }
 
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+ }
+
+ .isDisabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  .isDisabled > a {
+    color: currentColor;
+    display: inline-block;  /* For IE11/ MS Edge bug */
+    pointer-events: none;
+    text-decoration: none;
+  }
+

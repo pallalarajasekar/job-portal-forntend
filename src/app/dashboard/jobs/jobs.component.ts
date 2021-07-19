@@ -47,8 +47,8 @@ export class JobsComponent implements OnInit {
 
     })
 
-    let serchJobData = localStorage.getItem("responseToken");
-    console.log(JSON.stringify(serchJobData));
+    //let serchJobData = localStorage.getItem("responseToken");
+    //console.log(JSON.stringify(serchJobData));
     this.getJobs_data();
   }
 
@@ -104,7 +104,7 @@ export class JobsComponent implements OnInit {
   getserchjobs(getsearchdata: any){
     this.data.jobSearch(getsearchdata).subscribe((data: any) => {
       this.jobsData = data;
-      localStorage.setItem("responseToken",this.jobsData);
+      //localStorage.setItem("responseToken",this.jobsData);
       console.log(this.jobsData);
     },
       (error) => {
